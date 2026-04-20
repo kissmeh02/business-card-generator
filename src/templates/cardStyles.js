@@ -170,7 +170,7 @@ export const cardCss = `
   margin-top: 3px;
 }
 
-.back { background: #0a1117; }
+.back { background: #080e14; }
 .back .layout {
   position: absolute; inset: 0;
   display: flex;
