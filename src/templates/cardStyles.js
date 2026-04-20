@@ -164,8 +164,8 @@ export const cardCss = `
   color: #b6d4e0;
   letter-spacing: 0.12em;
   display: block;
-  text-align: center;
-  margin-top: 6px;
+  text-align: left;
+  margin-top: 3px;
 }
 
 .back { background: #0a1117; }
