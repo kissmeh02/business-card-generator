@@ -55,18 +55,15 @@ export const cardCss = `
   object-fit: contain;
   transition: filter 0.4s ease, transform 0.4s ease;
 }
-.logo-col.uv-on img,
 .back-logo-col.uv-on img {
   filter:
     drop-shadow(0 0 1px rgba(255,255,255,0.35))
     brightness(1.18) contrast(1.12) saturate(1.1);
   transform: scale(1.005);
 }
-.logo-col.uv-on,
 .back-logo-col.uv-on {
   position: relative;
 }
-.logo-col.uv-on::after,
 .back-logo-col.uv-on::after {
   content: '';
   position: absolute;

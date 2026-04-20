@@ -171,7 +171,6 @@ function HomePage() {
               side="back"
               contactSize="10.5px"
               showGuides={showGuides}
-              showUv={showUvPreview}
             />
           </div>
         </section>

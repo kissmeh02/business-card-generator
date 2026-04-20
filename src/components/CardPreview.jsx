@@ -41,7 +41,6 @@ function CardPreview({
             <DetailCard
               card={card}
               contactSize={contactSize}
-              showUv={showUv}
             />
           )}
           {showGuides && <PrintGuides />}

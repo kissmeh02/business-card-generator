@@ -14,14 +14,14 @@ function EmailText({ email }) {
   )
 }
 
-function DetailCard({ card, contactSize, showUv = false }) {
+function DetailCard({ card, contactSize }) {
   const style = contactSize ? { '--contact-size': contactSize } : undefined
 
   return (
     <div className="card front" style={style}>
       <FrontBackground />
       <div className="layout">
-        <div className={`logo-col${showUv ? ' uv-on' : ''}`}>
+        <div className="logo-col">
           <img src={LOGO_SRC} alt="6Phene Inc. logo" />
         </div>
         <div className="vr" />
