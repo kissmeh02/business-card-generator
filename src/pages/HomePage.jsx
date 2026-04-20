@@ -169,7 +169,7 @@ function HomePage() {
             <CardPreview
               card={card}
               side="back"
-              contactSize="10.5px"
+              contactSize="10px"
               showGuides={showGuides}
             />
           </div>
