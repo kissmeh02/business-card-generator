@@ -36,7 +36,7 @@ function BackBackground() {
           />
         </pattern>
       </defs>
-      <rect width={CARD_WIDTH} height={CARD_HEIGHT} fill="#080e14" />
+      <rect width={CARD_WIDTH} height={CARD_HEIGHT} fill="#060b10" />
       <rect width={CARD_WIDTH} height={CARD_HEIGHT} fill="url(#hxb)" />
       <rect width={CARD_WIDTH} height={CARD_HEIGHT} fill="url(#rg2)" />
       <rect width={CARD_WIDTH} height={CARD_HEIGHT} fill="url(#vg2)" />

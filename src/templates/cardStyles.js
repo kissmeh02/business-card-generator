@@ -191,7 +191,7 @@ export const cardCss = `
   margin-top: 3px;
 }
 
-.back { background: #080e14; }
+.back { background: #060b10; }
 .back .layout {
   position: absolute; inset: 0;
   display: flex;
