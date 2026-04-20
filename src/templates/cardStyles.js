@@ -8,8 +8,9 @@ export const cardCss = `
 
 :root {
   --g: 'Montserrat','Gill Sans','Century Gothic',sans-serif;
+  --gothic: 'Rajdhani', 'Century Gothic', CenturyGothic, 'Montserrat', sans-serif;
   --m: 'Space Mono', monospace;
-  --s: 'Saira Stencil One', sans-serif;
+  --s: var(--m);
   --cyan: #00e5ff;
   --white: #eef4f7;
   --silver: #6a8a9a;
@@ -122,7 +123,7 @@ export const cardCss = `
   align-items: center;
 }
 .brand {
-  font-family: var(--g);
+  font-family: var(--gothic);
   font-weight: 700;
   font-size: 16.5px;
   letter-spacing: 0.18em;
@@ -141,7 +142,7 @@ export const cardCss = `
 .rule  { width: 100%; height: 1px; background: linear-gradient(270deg,rgba(0,229,255,.18),transparent 80%); margin-bottom: 10px; }
 .rule2 { width: 100%; height: 1px; background: linear-gradient(270deg,rgba(0,229,255,.1),transparent 70%); margin: 9px 0; }
 .name {
-  font-family: var(--g);
+  font-family: var(--gothic);
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.03em;
@@ -180,6 +181,7 @@ export const cardCss = `
 .contact .at-sign {
   font-family: var(--s);
   font-size: 1.1em;
+  color: var(--cyan);
 }
 .website {
   font-family: var(--m);
@@ -223,7 +225,7 @@ export const cardCss = `
   text-align: right;
 }
 .back-brand {
-  font-family: var(--g);
+  font-family: var(--gothic);
   font-weight: 700;
   font-size: 22px;
   letter-spacing: 0.14em;

@@ -1,6 +1,5 @@
 import BackBackground from '../backgrounds/BackBackground.jsx'
-
-const LOGO_SRC = '/images/6phene-logo.png'
+import { BRAND } from '../../config/constants.js'
 
 function BrandCard({ showUv = false }) {
   return (
@@ -8,12 +7,12 @@ function BrandCard({ showUv = false }) {
       <BackBackground />
       <div className="layout">
         <div className={`back-logo-col${showUv ? ' uv-on' : ''}`}>
-          <img src={LOGO_SRC} alt="6Phene Inc. logo" />
+          <img src={BRAND.logoPath} alt={`${BRAND.name} logo`} />
         </div>
         <div className="back-vr" />
         <div className="back-text">
-          <div className="back-brand">6PHENE INC.</div>
-          <div className="back-sub">Graphene · Nano · Materials</div>
+          <div className="back-brand">{BRAND.name}</div>
+          <div className="back-sub">{BRAND.tagline}</div>
           <div className="back-rule" />
         </div>
       </div>

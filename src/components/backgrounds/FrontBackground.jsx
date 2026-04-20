@@ -1,4 +1,5 @@
 import { CARD_WIDTH, CARD_HEIGHT } from '../../templates/cardStyles.js'
+import HexPattern from './HexPattern.jsx'
 
 function FrontBackground() {
   return (
@@ -19,22 +20,7 @@ function FrontBackground() {
           <stop offset="88%" stopColor="#000000" stopOpacity="0.5" />
           <stop offset="100%" stopColor="#000000" stopOpacity="0.8" />
         </radialGradient>
-        <pattern
-          id="hx"
-          x="0"
-          y="0"
-          width="20"
-          height="23.1"
-          patternUnits="userSpaceOnUse"
-        >
-          <polygon
-            points="10,0.7 18.3,5.5 18.3,15.1 10,19.9 1.7,15.1 1.7,5.5"
-            fill="none"
-            stroke="#00e5ff"
-            strokeWidth="0.28"
-            opacity="0.09"
-          />
-        </pattern>
+        <HexPattern id="hx" opacity={0.09} />
         <mask id="hxm">
           <rect width={CARD_WIDTH} height={CARD_HEIGHT} fill="url(#hxg)" />
         </mask>

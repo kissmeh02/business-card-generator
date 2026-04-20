@@ -6,11 +6,7 @@ import {
   cardCss,
 } from './cardStyles.js'
 import { deriveEmail } from '../utils/email.js'
-
-const DETAIL_TAGLINE = 'Advanced Graphene Nanotechnology'
-const FRONT_BRAND = '6PHENE INC.'
-const FRONT_TAGLINE = 'Graphene · Nano · Materials'
-const WEBSITE = '6Phene.com'
+import { BRAND } from '../config/constants.js'
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -96,7 +92,7 @@ export function buildDetailCardHtml(card, logoSrc) {
 <div class="card front">
   ${frontBgSvg()}
   <div class="layout">
-    <div class="logo-col"><img src="${logoSrc}" alt="${FRONT_BRAND} logo"/></div>
+    <div class="logo-col"><img src="${logoSrc}" alt="${BRAND.name} logo"/></div>
     <div class="vr"></div>
     <div class="text-col">
       <div class="person-block">
@@ -108,11 +104,11 @@ export function buildDetailCardHtml(card, logoSrc) {
           <span class="contact-line contact-email">${email}</span>
           <span class="contact-line contact-phone">${phone}</span>
         </div>
-        <span class="website">${WEBSITE}</span>
+        <span class="website">${BRAND.website}</span>
       </div>
     </div>
   </div>
-  <div class="tagline">${DETAIL_TAGLINE}</div>
+  <div class="tagline">${BRAND.detailTagline}</div>
 </div>`.trim()
 }
 
@@ -121,11 +117,11 @@ export function buildBrandCardHtml(logoSrc) {
 <div class="card back">
   ${backBgSvg()}
   <div class="layout">
-    <div class="back-logo-col"><img src="${logoSrc}" alt="${FRONT_BRAND} logo"/></div>
+    <div class="back-logo-col"><img src="${logoSrc}" alt="${BRAND.name} logo"/></div>
     <div class="back-vr"></div>
     <div class="back-text">
-      <div class="back-brand">${FRONT_BRAND}</div>
-      <div class="back-sub">${FRONT_TAGLINE}</div>
+      <div class="back-brand">${BRAND.name}</div>
+      <div class="back-sub">${BRAND.tagline}</div>
       <div class="back-rule"></div>
     </div>
   </div>
@@ -141,10 +137,10 @@ export function createPrintHtml(card, logoSrc) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${escapeHtml(card.name || FRONT_BRAND)} - Moo Mini Card Export</title>
+  <title>${escapeHtml(card.name || BRAND.name)} - Moo Mini Card Export</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Saira+Stencil+One&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
   <style>
     ${cardCss}
 
@@ -234,7 +230,7 @@ export function createUvPrintHtml(logoSrc) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6Phene Inc. - Moo Mini Card Spot UV Mask</title>
+  <title>${escapeHtml(BRAND.name)} - Moo Mini Card Spot UV Mask</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -351,7 +347,7 @@ export function createUvPrintHtml(logoSrc) {
 </head>
 <body>
   <div class="uv-doc-intro">
-    <h1>Spot UV mask &mdash; 6Phene Moo Mini (back only)</h1>
+    <h1>Spot UV mask &mdash; ${escapeHtml(BRAND.name)} Moo Mini (back only)</h1>
     <p>
       <strong>Back of card only.</strong> Black &equals; 100% UV coating,
       White &equals; no coating. The UV mask matches the exact logo shape
@@ -405,14 +401,22 @@ export function createUvPrintHtml(logoSrc) {
 </html>`
 }
 
+const logoCache = new Map()
+
 export async function fetchLogoDataUrl(logoUrl) {
+  if (logoCache.has(logoUrl)) return logoCache.get(logoUrl)
+
   const response = await fetch(logoUrl)
+  if (!response.ok) throw new Error(`Failed to load logo (${response.status})`)
   const blob = await response.blob()
 
-  return await new Promise((resolve, reject) => {
+  const dataUrl = await new Promise((resolve, reject) => {
     const reader = new FileReader()
     reader.onload = () => resolve(reader.result)
     reader.onerror = reject
     reader.readAsDataURL(blob)
   })
+
+  logoCache.set(logoUrl, dataUrl)
+  return dataUrl
 }

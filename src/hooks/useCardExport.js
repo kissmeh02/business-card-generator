@@ -5,8 +5,7 @@ import {
   fetchLogoDataUrl,
 } from '../templates/mooMiniCardTemplate.js'
 import { downloadTextFile, openPrintWindow } from '../utils/fileExport.js'
-
-const LOGO_URL = '/images/6phene-logo.png'
+import { BRAND } from '../config/constants.js'
 
 export function useCardExport(card) {
   const [isExporting, setIsExporting] = useState(false)
@@ -16,10 +15,13 @@ export function useCardExport(card) {
     setIsExporting(true)
     setExportError(null)
     try {
-      const logoDataUrl = await fetchLogoDataUrl(LOGO_URL)
+      const logoDataUrl = await fetchLogoDataUrl(BRAND.logoPath)
       exportFn(logoDataUrl)
     } catch (err) {
-      setExportError(err.message || 'Export failed. Please try again.')
+      const message = err instanceof TypeError
+        ? 'Network error. Check your connection.'
+        : err.message || 'Export failed. Please try again.'
+      setExportError(message)
     } finally {
       setIsExporting(false)
     }

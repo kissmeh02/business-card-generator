@@ -1,6 +1,5 @@
 import FrontBackground from '../backgrounds/FrontBackground.jsx'
-
-const LOGO_SRC = '/images/6phene-logo.png'
+import { BRAND } from '../../config/constants.js'
 
 function EmailText({ email }) {
   const idx = email.indexOf('@')
@@ -22,7 +21,7 @@ function DetailCard({ card, contactSize }) {
       <FrontBackground />
       <div className="layout">
         <div className="logo-col">
-          <img src={LOGO_SRC} alt="6Phene Inc. logo" />
+          <img src={BRAND.logoPath} alt={`${BRAND.name} logo`} />
         </div>
         <div className="vr" />
         <div className="text-col">
@@ -39,11 +38,11 @@ function DetailCard({ card, contactSize }) {
                 {card.phone || '+1 (000) 000-0000'}
               </span>
             </div>
-            <span className="website">6Phene.com</span>
+            <span className="website">{BRAND.website}</span>
           </div>
         </div>
       </div>
-      <div className="tagline">Advanced Graphene Nanotechnology</div>
+      <div className="tagline">{BRAND.detailTagline}</div>
     </div>
   )
 }
