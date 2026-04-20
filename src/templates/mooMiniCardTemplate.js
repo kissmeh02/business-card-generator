@@ -110,9 +110,9 @@ export function buildDetailCardHtml(card, logoSrc) {
         </div>
         <span class="website">${WEBSITE}</span>
       </div>
-      <div class="tagline">${DETAIL_TAGLINE}</div>
     </div>
   </div>
+  <div class="tagline">${DETAIL_TAGLINE}</div>
 </div>`.trim()
 }
 

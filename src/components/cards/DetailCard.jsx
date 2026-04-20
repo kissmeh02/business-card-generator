@@ -41,9 +41,9 @@ function DetailCard({ card, contactSize, showUv = false }) {
             </div>
             <span className="website">6Phene.com</span>
           </div>
-          <div className="tagline">Advanced Graphene Nanotechnology</div>
         </div>
       </div>
+      <div className="tagline">Advanced Graphene Nanotechnology</div>
     </div>
   )
 }

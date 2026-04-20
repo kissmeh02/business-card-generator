@@ -83,6 +83,10 @@ export const cardCss = `
 }
 
 .tagline {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
   font-family: var(--g);
   font-weight: 400;
   font-size: 8.5px;
@@ -92,6 +96,7 @@ export const cardCss = `
   white-space: nowrap;
   opacity: 0.9;
   text-align: center;
+  pointer-events: none;
 }
 
 .brand-wrap {
