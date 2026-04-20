@@ -1,16 +1,57 @@
-# React + Vite
+# 6Phene Business Card Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite app for generating print-ready **Moo Mini** business cards (2.8" x 1.1") for 6Phene Inc.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Live preview of front and back card artwork
+- Real-time form editing with auto-formatted email
+- Print bleed and safety guide overlays
+- Spot UV mask generation for logo coating
+- One-click HTML export with embedded assets
+- Print-to-PDF workflow for Moo upload
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** with Vite 8
+- Pure CSS styling (no UI framework)
+- SVG backgrounds with hex pattern and vignette
+- Canvas-based UV mask rendering at 4x resolution
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Export Workflow
+
+1. Fill in card details in the form
+2. Click **Download print-ready HTML** or **Open print view**
+3. Print to PDF at 2.8" x 1.1" in a Chromium browser
+4. Upload to Moo as custom artwork
+
+## Project Structure
+
+```
+src/
+  components/        # UI components
+    backgrounds/     # SVG background renderers
+    cards/           # Card face components
+  data/              # Default card data
+  hooks/             # Custom React hooks
+  pages/             # Page-level components
+  styles/            # Global CSS
+  templates/         # Print/export HTML generators
+  utils/             # Email, file export helpers
+```
+
+## Links
+
+- [Notion Project Board](https://www.notion.so/)
+- [Live Site](https://kissmeh02.github.io/business-card-generator/)
+
+## License
+
+Private - 6Phene Inc.

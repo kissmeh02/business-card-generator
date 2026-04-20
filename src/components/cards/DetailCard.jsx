@@ -26,7 +26,6 @@ function DetailCard({ card, contactSize, showUv = false }) {
         </div>
         <div className="vr" />
         <div className="text-col">
-          <div className="tagline">Advanced Graphene Nanotechnology</div>
           <div className="person-block">
             <div className="rule" />
             <div className="name">{card.name || 'Your Name'}</div>
@@ -42,6 +41,7 @@ function DetailCard({ card, contactSize, showUv = false }) {
             </div>
             <span className="website">6Phene.com</span>
           </div>
+          <div className="tagline">Advanced Graphene Nanotechnology</div>
         </div>
       </div>
     </div>

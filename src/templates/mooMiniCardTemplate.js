@@ -99,7 +99,6 @@ export function buildDetailCardHtml(card, logoSrc) {
     <div class="logo-col"><img src="${logoSrc}" alt="${FRONT_BRAND} logo"/></div>
     <div class="vr"></div>
     <div class="text-col">
-      <div class="tagline">${DETAIL_TAGLINE}</div>
       <div class="person-block">
         <div class="rule"></div>
         <div class="name">${name}</div>
@@ -111,6 +110,7 @@ export function buildDetailCardHtml(card, logoSrc) {
         </div>
         <span class="website">${WEBSITE}</span>
       </div>
+      <div class="tagline">${DETAIL_TAGLINE}</div>
     </div>
   </div>
 </div>`.trim()
