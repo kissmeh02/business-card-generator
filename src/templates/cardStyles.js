@@ -65,11 +65,7 @@ export const cardCss = `
 }
 
 .vr {
-  width: 1px;
-  height: 130px;
-  flex-shrink: 0;
-  background: linear-gradient(180deg, transparent, rgba(0,229,255,0.16) 25%, rgba(0,229,255,0.16) 75%, transparent);
-  margin-right: 4px;
+  display: none;
 }
 
 .text-col {
