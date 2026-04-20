@@ -14,10 +14,10 @@ function BackBackground() {
           <stop offset="100%" stopColor="#00e5ff" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="vg2" cx="50%" cy="50%" r="95%">
-          <stop offset="60%" stopColor="#000000" stopOpacity="0" />
-          <stop offset="80%" stopColor="#000000" stopOpacity="0.08" />
-          <stop offset="92%" stopColor="#000000" stopOpacity="0.25" />
-          <stop offset="100%" stopColor="#000000" stopOpacity="0.45" />
+          <stop offset="65%" stopColor="#000000" stopOpacity="0" />
+          <stop offset="82%" stopColor="#000000" stopOpacity="0.06" />
+          <stop offset="93%" stopColor="#000000" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="#000000" stopOpacity="0.35" />
         </radialGradient>
         <pattern
           id="hxb"

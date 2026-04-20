@@ -63,10 +63,10 @@ function backBgSvg() {
           <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
         </radialGradient>
         <radialGradient id="vg2" cx="50%" cy="50%" r="95%">
-          <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
-          <stop offset="80%" stop-color="#000000" stop-opacity="0.08"/>
-          <stop offset="92%" stop-color="#000000" stop-opacity="0.25"/>
-          <stop offset="100%" stop-color="#000000" stop-opacity="0.45"/>
+          <stop offset="65%" stop-color="#000000" stop-opacity="0"/>
+          <stop offset="82%" stop-color="#000000" stop-opacity="0.06"/>
+          <stop offset="93%" stop-color="#000000" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
         </radialGradient>
         <pattern id="hxb" x="0" y="0" width="20" height="23.1" patternUnits="userSpaceOnUse">
           <polygon points="10,0.7 18.3,5.5 18.3,15.1 10,19.9 1.7,15.1 1.7,5.5"
