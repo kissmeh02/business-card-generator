@@ -168,7 +168,7 @@ function HomePage() {
             <CardPreview
               card={card}
               side="back"
-              contactSize="9.5px"
+              contactSize="10.5px"
               showGuides={showGuides}
               showUv={showUvPreview}
             />
