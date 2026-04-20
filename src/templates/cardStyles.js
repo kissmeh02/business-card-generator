@@ -152,7 +152,7 @@ export const cardCss = `
 .title {
   font-family: var(--g);
   font-weight: 500;
-  font-size: 13.5px;
+  font-size: 11.5px;
   letter-spacing: 0.04em;
   color: var(--cyan);
   margin-top: 4px;
