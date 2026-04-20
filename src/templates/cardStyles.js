@@ -143,7 +143,7 @@ export const cardCss = `
 .name {
   font-family: var(--g);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.03em;
   color: var(--white);
   line-height: 1.15;
