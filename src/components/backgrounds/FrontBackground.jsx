@@ -14,10 +14,10 @@ function FrontBackground() {
           <stop offset="100%" stopColor="#00e5ff" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="vg1" cx="50%" cy="50%" r="95%">
-          <stop offset="55%" stopColor="#000000" stopOpacity="0" />
-          <stop offset="78%" stopColor="#000000" stopOpacity="0.15" />
-          <stop offset="92%" stopColor="#000000" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#000000" stopOpacity="0.7" />
+          <stop offset="50%" stopColor="#000000" stopOpacity="0" />
+          <stop offset="72%" stopColor="#000000" stopOpacity="0.2" />
+          <stop offset="88%" stopColor="#000000" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#000000" stopOpacity="0.8" />
         </radialGradient>
         <pattern
           id="hx"
