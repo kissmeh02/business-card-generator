@@ -199,11 +199,7 @@ export const cardCss = `
   transform: scale(1.018);
 }
 .back-vr {
-  width: 1px;
-  height: 130px;
-  flex-shrink: 0;
-  background: linear-gradient(180deg, transparent, rgba(0,229,255,0.14) 25%, rgba(0,229,255,0.14) 75%, transparent);
-  margin: 0 20px;
+  display: none;
 }
 .back-text {
   flex: 1;
