@@ -2,12 +2,12 @@ import BackBackground from '../backgrounds/BackBackground.jsx'
 
 const LOGO_SRC = '/images/6phene-logo.png'
 
-function BrandCard() {
+function BrandCard({ showUv = false }) {
   return (
     <div className="card back">
       <BackBackground />
       <div className="layout">
-        <div className="back-logo-col">
+        <div className={`back-logo-col${showUv ? ' uv-on' : ''}`}>
           <img src={LOGO_SRC} alt="6Phene Inc. logo" />
         </div>
         <div className="back-vr" />

@@ -55,13 +55,37 @@ export const cardCss = `
   object-fit: contain;
   transition: filter 0.4s ease, transform 0.4s ease;
 }
-.logo-col.uv-on img {
+.logo-col.uv-on img,
+.back-logo-col.uv-on img {
   filter:
-    drop-shadow(0 0 28px rgba(0,229,255,0.78))
-    drop-shadow(0 0 10px rgba(0,229,255,0.55))
-    drop-shadow(0 0 3px rgba(255,255,255,0.55))
-    brightness(1.22) contrast(1.08) saturate(1.18);
-  transform: scale(1.018);
+    drop-shadow(0 0 1px rgba(255,255,255,0.35))
+    brightness(1.18) contrast(1.12) saturate(1.1);
+  transform: scale(1.005);
+}
+.logo-col.uv-on,
+.back-logo-col.uv-on {
+  position: relative;
+}
+.logo-col.uv-on::after,
+.back-logo-col.uv-on::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 20%,
+    rgba(255,255,255,0.06) 35%,
+    rgba(255,255,255,0.14) 42%,
+    rgba(255,255,255,0.06) 50%,
+    transparent 65%
+  );
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: uv-sheen 3s ease-in-out infinite alternate;
+}
+@keyframes uv-sheen {
+  0%   { opacity: 0.5; }
+  100% { opacity: 1; }
 }
 
 .vr {
@@ -189,14 +213,6 @@ export const cardCss = `
   height: 155px;
   object-fit: contain;
   transition: filter 0.4s ease, transform 0.4s ease;
-}
-.back-logo-col.uv-on img {
-  filter:
-    drop-shadow(0 0 32px rgba(0,229,255,0.82))
-    drop-shadow(0 0 12px rgba(0,229,255,0.6))
-    drop-shadow(0 0 4px rgba(255,255,255,0.55))
-    brightness(1.22) contrast(1.08) saturate(1.18);
-  transform: scale(1.018);
 }
 .back-vr {
   display: none;

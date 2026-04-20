@@ -36,7 +36,7 @@ function CardPreview({
       <div className="mini-card-frame">
         <div className="card-stage">
           {side === 'front' ? (
-            <BrandCard />
+            <BrandCard showUv={showUv} />
           ) : (
             <DetailCard
               card={card}

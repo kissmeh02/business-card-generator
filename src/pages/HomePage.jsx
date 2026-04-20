@@ -164,6 +164,7 @@ function HomePage() {
               card={card}
               side="front"
               showGuides={showGuides}
+              showUv={showUvPreview}
             />
             <CardPreview
               card={card}
