@@ -119,9 +119,10 @@ export const cardCss = `
   display: flex;
   flex-direction: column;
   gap: 0;
+  text-align: right;
 }
-.rule  { width: 100%; height: 1px; background: linear-gradient(90deg,rgba(0,229,255,.18),transparent 80%); margin-bottom: 10px; }
-.rule2 { width: 100%; height: 1px; background: linear-gradient(90deg,rgba(0,229,255,.1),transparent 70%); margin: 9px 0; }
+.rule  { width: 100%; height: 1px; background: linear-gradient(270deg,rgba(0,229,255,.18),transparent 80%); margin-bottom: 10px; }
+.rule2 { width: 100%; height: 1px; background: linear-gradient(270deg,rgba(0,229,255,.1),transparent 70%); margin: 9px 0; }
 .name {
   font-family: var(--g);
   font-weight: 700;
@@ -169,7 +170,7 @@ export const cardCss = `
   color: #b6d4e0;
   letter-spacing: 0.12em;
   display: block;
-  text-align: left;
+  text-align: right;
   margin-top: 3px;
 }
 
